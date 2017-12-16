@@ -87,6 +87,8 @@ console.log(
   '\n',
   libro.editorial,
   '\n',
+  libro.citar,
+  '\n',
   libro.citar()
 )
 
@@ -103,4 +105,64 @@ console.log(
   libro.autor.nombre,
   '\n',
   libro.autor.apellido
+)
+
+//Declaración de arreglos
+const perros = [
+  'Husky',
+  'Labrador',
+  'Pastor Alemán',
+  'Gran Danés',
+  'Maltés',
+  'Boxer'
+]
+
+console.log(
+  'Arreglos',
+  '\n',
+  perros,
+  '\n',
+  perros.length,
+  '\n',
+  perros[3],
+  '\n',
+  perros[0],
+  '\n',
+  perros[6]
+)
+
+;
+//Es buena práctica encapsular tu código en una función anónima autoinvocada
+(function (c, d, w, n) {
+  c(
+    'Hola función autoinvocada',
+    '\n',
+    'document, window y navigator son los 3 objetos más importantes de JS en los navegadores',
+    '\n',
+    d,
+    '\n',
+    w,
+    '\n',
+    n
+  )
+
+  const perros = [
+    'Dálmata',
+    'Beagle',
+    'Bulldog',
+    'Border Collie',
+    'Doberman'
+  ]
+
+  c(
+    perros,
+    '\n',
+    perros.length
+  )
+})(console.log, document, window, navigator);
+
+console.log(
+  perros,
+  '\n',
+  perros.length
 )
