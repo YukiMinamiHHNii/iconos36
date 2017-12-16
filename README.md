@@ -48,10 +48,10 @@ Al finalizar el curso el estudiante aprenderá los fundamentos de programación 
 
 * Traer proyecto hecho en materias anteriores.
 * Pensar en un objeto del mundo real, describir 5 características y 3 acciones que pueda hacer.
-* **Sugerencia: comenzar a leer el libro *JS Inspírate*. **
+* **Sugerencia: comenzar a leer el libro *'JS Inspírate'*.**
 
 
 ### Clase 2:
 * Traer propuesta visual del proyecto final (Maquetación HTML y CSS).
 * El objeto que pensaron en la clase 1 traerlo programado como objeto literal y como clase de POO (5 atributos y 3 métodos).
-* **Sugerencia: leer el capítulo 11 del libro *JS Inspírate*.**
+* **Sugerencia: leer el capítulo 11 del libro *'JS Inspírate'*.**
