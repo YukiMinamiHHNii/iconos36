@@ -38,7 +38,7 @@ Al finalizar el curso el estudiante aprenderá los fundamentos de programación 
 
 * 30% Actividades.
 * 20% Propuesta del Proyecto (HTML y CSS).
-* 50% Aplicar 5 interacciones JS justificadas con la propuesta del proyecto.
+* 50% Aplicar 5 interacciones JS justificadas con la propuesta del proyecto (10% c/u).
 * Incluir en la carpeta del proyecto un archivo de texto que se llame **'README.txt'**, indicando en que partes del proyecto se programaron las interacciones JS, si la entrega no incluye este archivo, no se revisará.
 
 ### Entrega de proyecto:
