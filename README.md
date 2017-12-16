@@ -15,6 +15,7 @@
 * Christopher - cvz.tnk@gmail.com
 * Marc - marc.calzifer@gmail.com
 * Benjamin - benja.kalashlikov@gmail.com
+* Fernando - gallardo.guzman@hotmail.com
 
 ## Materia: Fundamentos de programación para web
 
