@@ -27,12 +27,22 @@ Al finalizar el curso el estudiante aprenderá los fundamentos de programación 
 
 * Conceptos básicos de Programación.
 * Fundamentos de Programación en JavaScript.
-* Sintaxis y Gramática actual JavaScript (ES6).
+* Sintaxis y Gramática actual JavaScript (ES2015).
 * Paradigmas de Programación en JavaScript.
 * Variables, Funciones, Objetos y Clases en JavaScript.
 * DOM, Eventos y Formularios.
 * AJAX y JSON.
 * Librerías, Plugins y Frameworks.
+
+### Evaluación:
+
+* 30% Actividades.
+* 20% Propuesta del Proyecto (HTML y CSS).
+* 50% Aplicar 5 interacciones JS justificadas con la propuesta del proyecto.
+
+### Entrega de proyecto:
+
+**Lunes 29 de Enero de 2018 a más tardar a las 11:59:59pm enviar por correo, .zip, dropbox, google drive, etc jonmircha@gmail.com**
 
 ### Clase 1:
 
