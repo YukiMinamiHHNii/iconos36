@@ -6,7 +6,8 @@
   const pWhatIsDOM = d.getElementById('what-is-dom'),
     tagLink = d.createElement('link'),
     cards = d.getElementById('cards'),
-    tagFigure = d.createElement('figure')
+    tagFigure = d.createElement('figure'),
+    linkDoc = d.getElementById('link-doc')
 
   /* ********** DECLARACIÓN DE FUNCIONES ********** */
 
@@ -89,4 +90,27 @@
       <figcaption>Sports</figcaption>
     </figure>
   `)
+
+  //Estableciendo y Obteniendo los valores de los atributos de las etiquetas HTML
+  //Métodos obtenedores (getters)
+  c(
+    linkDoc.href,
+    linkDoc.getAttribute('href'),
+    d.documentElement.lang,
+    d.documentElement.getAttribute('lang'),
+    linkDoc.style
+  )
+
+  //Métodos establecedores (setters)
+  d.documentElement.lang = 'es-CL'
+  d.documentElement.setAttribute('lang', 'es-MX')
+  linkDoc.href = 'https://developer.mozilla.org/es/docs/DOM'
+  linkDoc.setAttribute('target', '_blank')
+  linkDoc.style.padding = '1rem'
+  linkDoc.style.display = 'block'
+  linkDoc.style.width = '50%'
+  linkDoc.style.marginLeft = 'auto'
+  linkDoc.style.marginRight = 'auto'
+  linkDoc.style.textAlign = 'center'
+  linkDoc.style.borderRadius = '.25rem'
 })(console.log, document);
