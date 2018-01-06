@@ -56,3 +56,10 @@ Al finalizar el curso el estudiante aprenderá los fundamentos de programación 
 * Traer propuesta visual del proyecto final (Maquetación HTML y CSS).
 * El objeto que pensaron en la clase 1 traerlo programado como objeto literal y como clase de POO (5 atributos y 3 métodos).
 * **Sugerencia: leer el capítulo 11 del libro *'JS Inspírate'*.**
+
+### Clase 3:
+* Crear una zona de items dinámicamente con JS:
+  1. En el HTML sólo deberá existir el elemento padre donde cargarán los elementos hijos.
+  1. Los elementos hijos, tienen que ser creados dinámicamente con JS.
+  1. Todo el CSS del ejercicio deberá ser creado o inyectado dinámicamente con JS.
+
