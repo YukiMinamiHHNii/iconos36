@@ -13,16 +13,52 @@
     <a href="#" id="link-doc" style="color: #F0DB4F; background-color: #2B2B2B">Más información en MDN</a>
     <p>Algunos métodos para interactuar con el DOM:</p>
     <ul id="dom-methods">
-      <li><b><code>querySelector()</code></b></li>
-      <li><b><code>querySelectorAll()</code></b></li>
-      <li><b><code>getElementById()</code></b></li>
-      <li><b><code>innerHTML</code></b></li>
-      <li><b><code>innerText</code></b></li>
-      <li><b><code>createElement()</code></b></li>
-      <li><b><code>appendChild()</code></b></li>
-      <li><b><code>removeChild()</code></b></li>
-      <li><b><code>insertBefore()</code></b></li>
-      <li><b><code>insertAdjacentHMTL()</code></b></li>
+      <li>
+        <b><code>querySelector()</code></b>
+        <span>devuelve el código HTML del primer elemento que tenga el valor del selector CSS buscado.</span>
+      </li>
+      <li>
+        <b><code>querySelectorAll()</code></b>
+        <span>devuelve en un <b>arreglo</b> el código HTML de todos los elementos que tengan el valor del selector buscado.</span>
+      </li>
+      <li>
+        <b><code>getElementById()</code></b>
+        <span>devuelve el código HTML del elemento con el nombre de id buscado, este método es más rápido que <b><code>querySelector</code></b>.</span>
+      </li>
+      <li>
+        <b><code>innerText</code></b>
+        <span>Crea o modifica el contenido textual del elemento especificado.</span>
+      </li>
+      <li>
+        <b><code>innerHTML</code></b>
+        <span>Crea o modifica el contenido HTML del elemento especificado.</span>
+      </li>
+      <li>
+        <b><code>createElement()</code></b>
+        <span>Crea un nuevo elemento HTML.</span>
+      </li>
+      <li>
+        <b><code>appendChild()</code></b>
+        <span>Agrega un nodo hijo al final del elemento HTML especificado.</span>
+      </li>
+      <li>
+        <b><code>removeChild()</code></b>
+        <span>Elimina el nodo hijo indicado del elemento HTML especificado.</span>
+      </li>
+      <li>
+        <b><code>insertBefore()</code></b>
+        <span>Inserta un nuevo nodo hijo antes del indicado como referencia en elemento HTML especificado.</span>
+      </li>
+      <li>
+        <b><code>insertAdjacentHMTL()</code></b>
+        <span>Inserta código HTML dada una posición relativa a un elemento y éstas pueden ser:</span>
+        <ul>
+          <li><b><code>beforebegin</code></b>: Antes que el elemento mismo.</li>
+          <li><b><code>afterbegin</code></b>: Justo al inicio dentro del elemento, antes del primer elemento hijo.</li>
+          <li><b><code>beforeend</code></b>: Dentro del elemento, justo después del último elemento hijo.</li>
+          <li><b><code>afterend</code></b>: Después del elemento mismo.</li>
+        </ul>
+      </li>
     </ul>
   </article>
   <article id="cards" class="container  post  cards">
