@@ -130,6 +130,8 @@
   d.addEventListener('DOMContentLoaded', sayHi)
 
   alarm.src = './assets/alarm.mp3'
+  //alarm.controls = true
+  //d.body.appendChild(alarm)
 
   /*
   //Sin Arrow Function
@@ -143,4 +145,6 @@
   startClock.addEventListener( 'click', () => clockTempo = setInterval( () => clock.textContent = new Date().toLocaleString(), 1000 ) )
 
   stopClock.addEventListener( 'click', () => clearInterval( clockTempo ) )
+
+  startAlarm.addEventListener( 'click' , () => alarmTempo = setTimeout(() => alarm.play(), 3000) )
 })(document, console.log);
