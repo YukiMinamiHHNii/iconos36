@@ -147,4 +147,6 @@
   stopClock.addEventListener( 'click', () => clearInterval( clockTempo ) )
 
   startAlarm.addEventListener( 'click' , () => alarmTempo = setTimeout(() => alarm.play(), 3000) )
+
+  stopAlarm.addEventListener( 'click', () => clearTimeout(alarmTempo) )
 })(document, console.log);
