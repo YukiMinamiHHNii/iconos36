@@ -17,7 +17,11 @@
     startClock = d.getElementById('start-clock'),
     stopClock = d.getElementById('stop-clock'),
     startAlarm = d.getElementById('start-alarm'),
-    stopAlarm = d.getElementById('stop-alarm')
+    stopAlarm = d.getElementById('stop-alarm'),
+    alarm = d.createElement('audio')
+
+  let clockTempo,
+    alarmTempo
 
   /* ********** DECLARACIÓN DE FUNCIONES ********** */
   //http://www.etnassoft.com/2011/09/02/funciones-declaradas-vs-funciones-expresadas-en-javascript/
@@ -124,4 +128,19 @@
   })
 
   d.addEventListener('DOMContentLoaded', sayHi)
+
+  alarm.src = './assets/alarm.mp3'
+
+  /*
+  //Sin Arrow Function
+  startClock.addEventListener('click', function () {
+    clockTempo = setInterval(function () {
+      clock.textContent = new Date().toLocaleString()
+    }, 1000)
+  })
+  */
+
+  startClock.addEventListener( 'click', () => clockTempo = setInterval( () => clock.textContent = new Date().toLocaleString(), 1000 ) )
+
+  stopClock.addEventListener( 'click', () => clearInterval( clockTempo ) )
 })(document, console.log);
