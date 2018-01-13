@@ -63,3 +63,6 @@ Al finalizar el curso el estudiante aprenderá los fundamentos de programación 
   1. Los elementos hijos, tienen que ser creados dinámicamente con JS.
   1. Todo el CSS del ejercicio deberá ser creado o inyectado dinámicamente con JS.
 
+### Clase 4:
+* Desencadenar la acción de 3 eventos que alteren la interfáz de tu documento HTML.
+
