@@ -41,5 +41,18 @@
     }
   })
 
+  d.forms[0].addEventListener('submit', e => {
+    alert('Enviando Formulario')
+    e.preventDefault()
+    preload.classList.add('is-active')
+    setTimeout(() => {
+      preload.classList.remove('is-active')
+      message.classList.add('is-active')
+      d.forms[0].reset()
+      setTimeout(() => {
+        message.classList.remove('is-active')
+      }, 3000)
+    }, 2000)
+  })
 
 })(document, console.log);
