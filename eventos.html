@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <link rel="stylesheet" href="./css/eventos.css">
+</head>
+<body>
+  <header id="header" class="fixed  bg-yellow">
+    <h1>Eventos</h1>
+    <a href="./index.html">regresar</a>
+  </header>
+  <section id="events" class="after-fixed">
+    <p id="what-is-event"></p>
+    <nav class="flex-colum-center">
+      <button onclick="alert('Hola Mundo')">Evento disparado como atributo del HTML</button>
+      <button id="btn-hello">Evento disparado con un manejador de eventos</button>
+      <button id="btn-header-fixed">Cabecera normal</button>
+      <button id="btn-header-color">Cabecera verde</button>
+      <button id="btn-cards-figures">Cambiar a figuras</button>
+    </nav>
+    <article id="cards" class="container  post  cards">
+      <figure class="card">
+        <img src="https://placeimg.com/400/400/any" alt="Nature">
+        <figcaption>Nature</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/400/400/tech" alt="Tech">
+        <figcaption>Tech</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/400/400/animals" alt="Animals">
+        <figcaption>Animals</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/400/400/people" alt="People">
+        <figcaption>People</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/400/400/arch" alt="Architecture">
+        <figcaption>Architecture</figcaption>
+      </figure>
+    </article>
+    <article class="flex-colum-center">
+      <h2 class="clock-title"></h2>
+      <h2 class="clock"></h2>
+      <nav class="flex-colum-center">
+        <button id="start-clock">Iniciar Reloj</button>
+        <button id="stop-clock">Detener Reloj</button>
+        <button id="start-alarm">Iniciar Alarma</button>
+        <button id="stop-alarm">Detener Alarma</button>
+      </nav>
+    </article>
+  </section>
+  <script src="./js/eventos.js"></script>
+</body>
+</html>
