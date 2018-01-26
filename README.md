@@ -31,8 +31,6 @@ Al finalizar el curso el estudiante aprenderá los fundamentos de programación 
 * Paradigmas de Programación en JavaScript.
 * Variables, Funciones, Objetos y Clases en JavaScript.
 * DOM, Eventos y Formularios.
-* AJAX y JSON.
-* Librerías, Plugins y Frameworks.
 
 ### Evaluación:
 
