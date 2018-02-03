@@ -32,4 +32,6 @@
 
 | Actividades | Gris | Christhopher | Marc | Benjamin | Fernando |
 | -- | -- | -- | -- | -- | -- |
-| 1. ??? | 0 | 0 | 0 | 0 | 0 |
+| 1. ¿Qué proyecto voy a hacer? x1 | ? | ? | ? | ? | ? |
+| 2. Archivo de Lógica de Negocio x2 | ? | ? | ? | ? | ? |
+| 3. Excel con 10 registros y catálogos completos x2 | ? | ? | ? | ? | ? |
