@@ -35,3 +35,6 @@
 | 1. ¿Qué proyecto voy a hacer? x1 | 10 | 10 | 10 | ? | 10 |
 | 2. Archivo de Lógica de Negocio x2 | 20 | 20 | 20 | ? | 20 |
 | 3. Excel con 10 registros y catálogos completos x2 | 20 | 20 | 20 | ? | 20 |
+| 4. Correcciones Lógica de Negocio y Excel x1 | ? | ? | ? | ? | ? |
+| 5. Esquema SQL de la BD x2 | ? | ? | ? | ? | ? |
+| 6. Llenar el Excel con 20 registros en la tabla principal x1 | ? | ? | ? | ? | ? |
