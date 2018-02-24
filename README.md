@@ -16,17 +16,19 @@
 * Benjamin - benja.kalashlikov@gmail.com
 * Fernando - gallardo.guzman@hotmail.com
 
-## Materias: Sábados 12-16hrs: 
+## Materias: Sábados 12-16hrs:
 
 1. **Sitios web dinámicos con MySQL y PHP** (03-feb al 03-mar).
 1. **Diseño de interfaces enriquecidas** (10-mar al 14-abr).
 1. **Aplicaciones dinámicas para sitios web** (21-abr al 19-may).
 
+### Apartir del 24 de Marzo la clase acaba a las 4:30pm
+
 ## Evaluación:
 
 * 100% Evaluación continua.
 * Fechas de corte:
-  1. 03 de Marzo
+  1. 10 de Marzo
   1. 14 de Abril
   1. 19 de Mayo
 
