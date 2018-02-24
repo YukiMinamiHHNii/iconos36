@@ -67,6 +67,9 @@
       Servidor Web
       <ul>
         <li>
+          <a href="https://bitnami.com/stacks" target="_blank">Bitnami (LAMP, MAMP o WAMP)</a>
+        </li>
+        <li>
           <a href="https://www.apachefriends.org/es/index.html" target="_blank">XAMPP</a>
         </li>
         <li>
@@ -198,9 +201,6 @@
   <p>Leer todos los campos de la tabla:</p>
   <code><pre>
   SELECT * FROM table;</pre></code>
-  <p>Leer algunos campos de la tabla:</p>
-  <code><pre>
-  SELECT field_1, field_2, field_n FROM table;</pre></code>
   <p>Leer algunos campos de la tabla:</p>
   <code><pre>
     SELECT field_1, field_2, field_n FROM table;</pre></code>
