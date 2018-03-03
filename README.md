@@ -28,15 +28,18 @@
 
 * 100% Evaluación continua.
 * Fechas de corte:
-  1. 10 de Marzo
+  1. 10 de Marzo (Entrega de archivo schema y crud)
   1. 14 de Abril
   1. 19 de Mayo
 
 | Actividades | Gris | Christhopher | Marc | Benjamin | Fernando |
 | -- | -- | -- | -- | -- | -- |
-| 1. ¿Qué proyecto voy a hacer? x1 | 10 | 10 | 10 | ? | 10 |
+| 1. ¿Qué proyecto voy a hacer? x1 | 10 | 10 | 10 | 8 | 10 |
 | 2. Archivo de Lógica de Negocio x2 | 20 | 20 | 20 | ? | 20 |
-| 3. Excel con 10 registros y catálogos completos x2 | 20 | 20 | 20 | ? | 20 |
-| 4. Correcciones Lógica de Negocio y Excel x1 | ? | ? | ? | ? | ? |
-| 5. Esquema SQL de la BD x2 | ? | ? | ? | ? | ? |
-| 6. Llenar el Excel con 20 registros en la tabla principal x1 | ? | ? | ? | ? | ? |
+| 3. Excel con 10 registros y catálogos completos x2 | 20 | 20 | 20 | 16 | 20 |
+| 4. Correcciones Lógica de Negocio y Excel x1 | 10 | 10 | 10 | ? | 10 |
+| 5. Esquema SQL de la BD x2 | 20 | 20 | 20 | ? | 20 |
+| 6. Llenar el Excel con 20 registros en la tabla principal x1 | 10 | 10 | 10 | ? | 10 |
+| 7. Esquema SQL de la BD (estructura y datos iniciales) x2 | ? | ? | ? | ? | ? |
+| 8. Entrega final del esquema SQL de la BD (estructura y datos iniciales) x3 | ? | ? | ? | ? | ? |
+| 9. Entrega final del archivo con opercaiones CRUD de la BD x3 | ? | ? | ? | ? | ? |
