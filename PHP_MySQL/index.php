@@ -267,7 +267,7 @@
     <li>Usa
       <b>snake_case</b>.</li>
   </ul>
-  <h3>Desarrollo web con PHP</h3>
+  <h3 id="ejercicios">Desarrollo web con PHP</h3>
   <ul>
     <li>
       <a href="./basics.php">Básicos</a>
