@@ -29,18 +29,30 @@
       $filename = $_FILES['a_file']['tmp_name'];
       $destination = './files/' . $_FILES['a_file']['name'];
 
-      move_uploaded_file($filename, $destination);
-
       if ( $_FILES['a_file']['error'] ) {
         echo '<p>Ocurrió un error al subir el archivo</p>';
       } else {
-        echo "
+        if (
+          ($_FILES['a_file']['type'] === 'text/plain' ||
+          $_FILES['a_file']['type'] === 'image/jpg' ||
+          $_FILES['a_file']['type'] === 'image/jpeg' ) && $_FILES['a_file']['size'] <= 1000000
+        ) {
+          move_uploaded_file($filename, $destination);
+          echo "
           <p>
             Tu archivo se ha subido con éxito, lo puedes ver <a href=\"$destination\" target=\"_blank\">aquí</a>.
           </p>
         ";
+        } else {
+          echo "
+          <p>
+            Sólo se permiten subir archivos .jpg, .jpeg y .txt
+          </p>
+        ";
+        }
       }
-    }
+      }
+
     ?>
 </body>
 </html>
