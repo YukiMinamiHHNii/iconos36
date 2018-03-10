@@ -41,5 +41,6 @@
 | 5. Esquema SQL de la BD x2 | 20 | 20 | 20 | 16 | 20 |
 | 6. Llenar el Excel con 20 registros en la tabla principal x1 | 10 | 10 | 10 | 8 | 10 |
 | 7. Esquema SQL de la BD (estructura y datos iniciales) x2 | 20 | 20 | 20 | 20 | 20 |
-| 8. Entrega final del esquema SQL de la BD (estructura y datos iniciales) x3 | ? | ? | ? | ? | ? |
-| 9. Entrega final del archivo con opercaiones CRUD de la BD x3 | ? | ? | ? | ? | ? |
+| 8. Entrega final del esquema SQL de la BD (estructura y datos iniciales) x3 | 30 | 30 | 30 | 30 | 20 |
+| 9. Entrega final del archivo con opercaiones CRUD de la BD x3 | 30 | 30 | 24 | 0 | 30 |
+| **Sitios Dinámicos con  MySQL y PHP**  | 10 | 10 | 10 | 8 | 9 |
