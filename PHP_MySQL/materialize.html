@@ -19,10 +19,95 @@
     main {
       flex: 1 0 auto;
     }
+
+    nav {
+      background-color: red;
+    }
+
+    .page-footer {
+      background-color: #333;
+    }
+
+    /* label color */
+
+    .input-field label {
+      color: #F00;
+    }
+
+    /* label focus color */
+
+    .input-field input[type=text]:focus+label {
+      color: #000;
+    }
+
+    /* label underline focus color */
+
+    .input-field input[type=text]:focus {
+      border-bottom: 1px solid #F00;
+      box-shadow: 0 1px 0 0 #000;
+    }
+
+    /* valid color */
+
+    .input-field input[type=text].valid {
+      border-bottom: 1px solid #F00;
+      box-shadow: 0 1px 0 0 #000;
+    }
+
+    /* invalid color */
+
+    .input-field input[type=text].invalid {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+    }
+
+    /* icon prefix focus color */
+
+    .input-field .prefix.active {
+      color: #F00;
+    }
   </style>
 </head>
 
 <body>
+  <header class="">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="sass.html">Sass</a>
+          </li>
+          <li>
+            <a href="badges.html">Components</a>
+          </li>
+          <li>
+            <a href="collapsible.html">Javascript</a>
+          </li>
+          <li>
+            <a href="mobile.html">Mobile</a>
+          </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li>
+            <a href="sass.html">Sass</a>
+          </li>
+          <li>
+            <a href="badges.html">Components</a>
+          </li>
+          <li>
+            <a href="collapsible.html">Javascript</a>
+          </li>
+          <li>
+            <a href="mobile.html">Mobile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <main class="">
     <h1 class="red-text  text-accent-2 truncate">Materialize CSS</h1>
     <a href="./index.php#ejercicios" class="waves-effect waves-light btn">
@@ -115,6 +200,70 @@
         </div>
       </div>
     </div>
+    <div class="divider"></div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label for="icon_telephone">Telephone</label>
+          </div>
+          <div class="input-field col s6">
+            <select name="" id="">
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="divider"></div>
+    <div class="carousel">
+      <a class="carousel-item" href="#one!">
+        <img src="https://placeimg.com/400/400/animals">
+      </a>
+      <a class="carousel-item" href="#two!">
+        <img src="https://placeimg.com/400/400/animals">
+      </a>
+      <a class="carousel-item" href="#three!">
+        <img src="https://placeimg.com/400/400/animals">
+      </a>
+      <a class="carousel-item" href="#four!">
+        <img src="https://placeimg.com/400/400/animals">
+      </a>
+      <a class="carousel-item" href="#five!">
+        <img src="https://placeimg.com/400/400/animals">
+      </a>
+    </div>
+    <div class="carousel carousel-slider center" data-indicators="true">
+      <div class="carousel-fixed-item center">
+        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+      </div>
+      <div class="carousel-item red white-text" href="#one!">
+        <h2>First Panel</h2>
+        <p class="white-text">This is your first panel</p>
+      </div>
+      <div class="carousel-item amber white-text" href="#two!">
+        <h2>Second Panel</h2>
+        <p class="white-text">This is your second panel</p>
+      </div>
+      <div class="carousel-item green white-text" href="#three!">
+        <h2>Third Panel</h2>
+        <p class="white-text">This is your third panel</p>
+      </div>
+      <div class="carousel-item blue white-text" href="#four!">
+        <h2>Fourth Panel</h2>
+        <p class="white-text">This is your fourth panel</p>
+      </div>
+    </div>
   </main>
   <footer class="page-footer">
     <div class="container">
@@ -151,6 +300,14 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('select').material_select();
+      $(".button-collapse").sideNav();
+      $('.carousel').carousel();
+      $('.carousel.carousel-slider').carousel({ fullWidth: true });
+    });
+  </script>
 </body>
 
 </html>
