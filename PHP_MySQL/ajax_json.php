@@ -42,7 +42,8 @@
   </ul>
   <h2>AJAX y Envío de Datos</h2>
   <h2>AJAX y APIs</h2>
-  <h2>AJAX y JSON</h2>
+  <h2>AJAX y JSON (JavaScript Object Notation)</h2>
+  <section id="movies" class="ajax"></section>
 
   <script src="./js/ajax_json.js"></script>
 </body>
