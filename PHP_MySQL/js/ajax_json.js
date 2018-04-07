@@ -28,11 +28,34 @@
     }
   })
   xhr.send()
-
 })(console.log, document, JSON, new XMLHttpRequest());
 
 ((c, d, j, xhr) => {
+  const shows = d.getElementById('shows'),
+    showsTemplate = d.getElementById('shows-template').content
 
+  d.addEventListener('DOMContentLoaded', e => {
+    xhr.open('GET', 'http://api.tvmaze.com/shows', true)
+    xhr.addEventListener('load', e => {
+      if (xhr.status >= 200 && xhr.status < 400) {
+        let showsJSON = j.parse(xhr.response)
+        c(showsJSON)
+
+        showsJSON.forEach(show => {
+          showsTemplate.querySelector('.Show-title').textContent = show.name
+          showsTemplate.querySelector('.Show-description').innerHTML = show.summary
+          showsTemplate.querySelector('.Show-image').src = show.image.original
+          showsTemplate.querySelector('.Show-image').alt = show.name
+
+          let clone = d.importNode(showsTemplate, true)
+          shows.appendChild(clone)
+        })
+      } else {
+        shows.innerHTML = `<b>El servidor NO responde. Error N° ${xhr.status}: <mark>${xhr.statusText}</mark></b>`
+      }
+    })
+    xhr.send()
+  })
 })(console.log, document, JSON, new XMLHttpRequest());
 
 ((c, d, j, xhr) => {

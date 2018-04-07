@@ -42,6 +42,7 @@
   </ul>
   <h2>AJAX y Envío de Datos</h2>
   <h2>AJAX y APIs</h2>
+  <section id="shows" class="ajax"></section>
   <h2>AJAX y JSON (JavaScript Object Notation)</h2>
   <section id="movies" class="ajax"></section>
   <template id="movies-template">
@@ -50,6 +51,13 @@
       <p><b></b></p>
       <p><i></i></p>
       <img>
+    </article>
+  </template>
+  <template id="shows-template">
+    <article class="Show">
+      <h3 class="Show-title"></h3>
+      <div class="Show-description"></div>
+      <img class="Show-image">
     </article>
   </template>
   <script src="./js/ajax_json.js"></script>
