@@ -44,7 +44,14 @@
   <h2>AJAX y APIs</h2>
   <h2>AJAX y JSON (JavaScript Object Notation)</h2>
   <section id="movies" class="ajax"></section>
-
+  <template id="movies-template">
+    <article>
+      <h2></h2>
+      <p><b></b></p>
+      <p><i></i></p>
+      <img>
+    </article>
+  </template>
   <script src="./js/ajax_json.js"></script>
 </body>
 
