@@ -41,6 +41,8 @@
     </li>
   </ul>
   <h2>AJAX y Envío de Datos</h2>
+  <input type="search" id="search" placeholder="Buscar shows...">
+  <section id="shows-query" class="ajax"></section>
   <h2>AJAX y APIs</h2>
   <section id="shows" class="ajax"></section>
   <h2>AJAX y JSON (JavaScript Object Notation)</h2>

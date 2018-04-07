@@ -59,5 +59,34 @@
 })(console.log, document, JSON, new XMLHttpRequest());
 
 ((c, d, j, xhr) => {
+  const shows = d.getElementById('shows-query'),
+    showsTemplate = d.getElementById('shows-template').content,
+    search = d.getElementById('search')
 
+  search.addEventListener('keyup', e => {
+    //c(e.target.value)
+    xhr.open('GET', `http://api.tvmaze.com/search/shows?q=${e.target.value}`)
+    xhr.addEventListener('readystatechange', e => {
+      //c(xhr)
+      if (xhr.readyState === 4) {
+        c(xhr)
+        let showsJSON = j.parse(xhr.response)
+
+        shows.innerHTML = null
+
+        showsJSON.forEach(query => {
+          //c(query)
+          let show = query.show
+          showsTemplate.querySelector('.Show-title').textContent = show.name
+          showsTemplate.querySelector('.Show-description').innerHTML = show.summary
+          showsTemplate.querySelector('.Show-image').src = show.image.original
+          showsTemplate.querySelector('.Show-image').alt = show.name
+
+          let clone = d.importNode(showsTemplate, true)
+          shows.appendChild(clone)
+        })
+      }
+    })
+    xhr.send()
+  })
 })(console.log, document, JSON, new XMLHttpRequest());
