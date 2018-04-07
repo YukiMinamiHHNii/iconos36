@@ -288,6 +288,12 @@
   <h3>Desarrollo web (Frontend + Backend)</h3>
   <ul>
     <li>
+      <a href="./site_php/">Sitio optimizado con PHP</a>
+    </li>
+    <li>
+      <a href="./materialize.html">Materialize CSS</a>
+    </li>
+    <li>
       <a href="./ajax_json.php">AJAX y JSON</a>
     </li>
     <li>
@@ -295,12 +301,6 @@
     </li>
     <li>
       <a href="./crud.php">CRUD en la web</a>
-    </li>
-    <li>
-      <a href="./routes.php">Manejo de rutas</a>
-    </li>
-    <li>
-      <a href="./site_php/">Sitio optimizado con PHP</a>
     </li>
   </ul>
 </body>

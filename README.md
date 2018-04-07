@@ -44,3 +44,4 @@
 | 8. Entrega final del esquema SQL de la BD (estructura y datos iniciales) x3 | 30 | 30 | 30 | 30 | 20 |
 | 9. Entrega final del archivo con opercaiones CRUD de la BD x3 | 30 | 30 | 24 | 0 | 30 |
 | **Sitios Dinámicos con  MySQL y PHP**  | 10 | 10 | 10 | 8 | 9 |
+| 10. ¿? x1 | ? | ? | ? | ? | ? |
