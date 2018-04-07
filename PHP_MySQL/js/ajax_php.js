@@ -41,5 +41,37 @@
     }
   })
 
+  d.forms[0].addEventListener('submit', e => {
+    let formData = new FormData(e.target)
+    e.preventDefault()
+    preload.classList.add('is-active')
 
+    xhr.open('POST', './send_form.php', true)
+
+    xhr.addEventListener('load', e => {
+      if (xhr.readyState === 4) {
+        preload.classList.remove('is-active')
+        message.classList.add('is-active')
+
+        if (xhr.status >= 200 && xhr.status < 400) {
+          let formJSON = j.parse(xhr.response)
+          message.innerHTML = `
+            <p>Tu información se ha enviado con éxito:</p>
+            <ul>
+              <li>Nombre: ${formJSON.name}</li>
+              <li>Email: ${formJSON.email}</li>
+              <li>Asunto: ${formJSON.subject}</li>
+              <li>Comentarios: ${formJSON.comments}</li>
+            </ul>
+          `
+
+          c(xhr.response)
+        } else {
+          message.innerHTML = `<b>El servidor NO responde. Error N° ${xhr.status}: <mark>${xhr.statusText}</mark></b>`
+        }
+      }
+    })
+
+    xhr.send(formData)
+  })
 })(document, console.log, JSON, new XMLHttpRequest());
