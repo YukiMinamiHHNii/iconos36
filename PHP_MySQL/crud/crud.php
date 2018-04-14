@@ -34,21 +34,31 @@ if ( $mysql->connect_error ) {
       );
       break;
 
-      case 'read':
+    case 'read':
+      $sql = "SELECT * FROM genres";
+      $result = $mysql->query($sql);
+      $data = array();
+
+      while ( $row = $result->fetch_assoc() ) {
+        array_push($data, $row);
+      }
+
       $res = array(
         'err' => false,
-        'type' => 'Acción Read'
+        'type' => 'Acción Read',
+        'data' => $data,
+        'numRows' => $result->num_rows
       );
       break;
 
-      case 'update':
+    case 'update':
       $res = array(
         'err' => false,
         'type' => 'Acción Update'
       );
       break;
 
-      case 'delete':
+    case 'delete':
       $res = array(
         'err' => false,
         'type' => 'Acción Delete'
@@ -64,6 +74,7 @@ if ( $mysql->connect_error ) {
   }
 }
 
+$result->free();
 $mysql->close();
 
 header( 'Content-type: application/json' );
