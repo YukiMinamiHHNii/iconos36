@@ -28,9 +28,23 @@ if ( $mysql->connect_error ) {
 
   switch ($action) {
     case 'create':
+      $genre_name = $_POST['genre_name'];
+      $sql = "INSERT INTO genres (genre_name) VALUES ('$genre_name')";
+      $result = $mysql->query($sql);
+
+      if ( $result ) {
+        $err = false;
+        $data = 'Registro agregado con éxito';
+      } else {
+        $err = true;
+        $data = 'Error al tratar de insertar registro';
+      }
+
       $res = array(
-        'err' => false,
-        'type' => 'Acción Create'
+        'err' => $err,
+        'type' => 'Acción Create',
+        'data' => $data,
+        'sql' => $sql
       );
       break;
 
@@ -74,7 +88,7 @@ if ( $mysql->connect_error ) {
   }
 }
 
-$result->free();
+//$result->free();
 $mysql->close();
 
 header( 'Content-type: application/json' );

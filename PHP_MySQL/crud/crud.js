@@ -26,7 +26,7 @@
             table.classList.add('is-active')
 
             res.data.forEach(row => {
-              c(row)
+              //c(row)
               tr.querySelector('.genre_id').textContent = row.genre_id
               tr.querySelector('.genre_name').textContent = row.genre_name
               tr.querySelector('.u-edit').dataset.id = row.genre_id
@@ -43,5 +43,18 @@
     })
 
     xhr.send()
+  })
+
+  d.querySelector('.Form-add').addEventListener('submit', e => {
+    let formData = new FormData(e.target)
+    e.preventDefault()
+
+    xhr.open('POST', './crud.php?action=create', true)
+    xhr.addEventListener('readystatechange', e => {
+      c(xhr.response)
+      //w.location.hash = '#'
+      //w.location.reload()
+    })
+    xhr.send(formData)
   })
 })(document, window, console.log, JSON, new XMLHttpRequest());

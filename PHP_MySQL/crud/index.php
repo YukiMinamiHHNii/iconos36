@@ -37,6 +37,16 @@
       </tr>
     </table>
   </main>
+  <section id="add" class="ModalWindow">
+    <div class="ModalWindow-box">
+      <a href="#">cerrar</a>
+      <h2>Agregar Género</h2>
+      <form class="Form-add">
+        <input type="text" name="genre_name" placeholder="Género" required>
+        <input type="submit">
+      </form>
+    </div>
+  </section>
   <template id="table-row">
     <tr>
       <td class="genre_id"></td>
