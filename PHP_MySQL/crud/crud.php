@@ -16,11 +16,55 @@ if ( $mysql->connect_error ) {
     'statusText' => $mysql->connect_error
   );
 } else {
-  $res = array(
+  /* $res = array(
     'err' => false,
     'type' => 'Conexión exitosa a la base de datos'
-  );
+  ); */
+  $action = 'read';
+
+  if ( isset( $_GET['action'] ) ) {
+    $action = $_GET['action'];
+  }
+
+  switch ($action) {
+    case 'create':
+      $res = array(
+        'err' => false,
+        'type' => 'Acción Create'
+      );
+      break;
+
+      case 'read':
+      $res = array(
+        'err' => false,
+        'type' => 'Acción Read'
+      );
+      break;
+
+      case 'update':
+      $res = array(
+        'err' => false,
+        'type' => 'Acción Update'
+      );
+      break;
+
+      case 'delete':
+      $res = array(
+        'err' => false,
+        'type' => 'Acción Delete'
+      );
+      break;
+
+    default:
+      $res = array(
+        'err' => true,
+        'type' => 'Acción No permitida'
+      );
+      break;
+  }
 }
+
+$mysql->close();
 
 header( 'Content-type: application/json' );
 echo json_encode($res);
