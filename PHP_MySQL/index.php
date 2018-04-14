@@ -300,7 +300,7 @@
       <a href="./ajax_php.php">AJAX y PHP</a>
     </li>
     <li>
-      <a href="./crud.php">CRUD en la web</a>
+      <a href="./crud/">CRUD en la web</a>
     </li>
   </ul>
 </body>
