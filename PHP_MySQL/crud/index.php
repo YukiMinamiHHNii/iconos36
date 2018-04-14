@@ -32,8 +32,8 @@
       <tr>
         <th>genre_id</th>
         <th>genre_name</th>
-        <th>editar</th>
-        <th>borrar</th>
+        <th></th>
+        <th></th>
       </tr>
     </table>
   </main>

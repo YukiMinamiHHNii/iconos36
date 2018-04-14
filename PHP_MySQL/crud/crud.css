@@ -33,6 +33,27 @@ html {
   max-width: var(--max-width);
 }
 
+.CRUD-table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: var(--main-color);
+  overflow-x: auto;
+}
+
+.CRUD-table tr:nth-child(even) { background-color: var(--bg-color); }
+
+.CRUD-table tr:nth-child(odd):not(:first-child) { background-color: var(--bg-alternate-color); }
+
+.CRUD-table th {
+  padding: .5rem;
+  text-align: left;
+  font-size: 1.15rem;
+  color: var(--bg-color);
+}
+
+.CRUD-table td { padding: .5rem; }
+
 /* ********** Utilities Classes ********** */
 .u-message {
   padding: 1rem;
