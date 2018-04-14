@@ -1,9 +1,71 @@
+/* ********** Custom Properties ********** */
+:root {
+  --font-size: 16px;
+  --line-height: 1.6;
+  --font-main: sans-serif;
+  --main-color: #4F5B93;
+  --second-color: #8892BF;
+  --bg-color: #E5E5E5;
+  --bg-alternate-color: #D4D4D4;
+  --main-modal-color: rgba(79, 91, 147, .75);
+  --max-width: 800px;
+}
+
+/* ********** Reset Styles ********** */
+html {
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* ********** CRUD ********** */
+.CRUD {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+/* ********** Utilities Classes ********** */
+.u-message {
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--second-color);
+  color: var(--bg-color);
+}
+
+.u-hidden {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.u-hidden.is-active {
+  height: auto;
+  opacity: 1;
+  transition: opacity 600ms ease-out,
+                  height 300ms ease-in;
+}
+
+
+
+
+
 
 /* ********** CSS Spinner ********** */
 /* http://tobiasahlin.com/spinkit/ */
 
 .spinner {
-  margin: 100px auto;
+  margin: 0 auto;
   width: 50px;
   height: 40px;
   text-align: center;

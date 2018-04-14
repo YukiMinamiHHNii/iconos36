@@ -15,7 +15,7 @@
       <a href="#add" class="u-btn  u-add">agregar</a>
     </header>
     <aside class="CRUD-response">
-      <div class="u-preload">
+      <div class="u-preload  u-hidden">
         <div class="spinner">
           <div class="rect1"></div>
           <div class="rect2"></div>
@@ -24,11 +24,11 @@
           <div class="rect5"></div>
         </div>
       </div>
-      <div class="u-message">
+      <div class="u-message  u-hidden">
         Mensaje del Servidor
       </div>
     </aside>
-    <table class="CRUD-table">
+    <table class="CRUD-table  u-hidden">
       <tr>
         <th>genre_id</th>
         <th>genre_name</th>
