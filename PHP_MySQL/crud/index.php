@@ -47,6 +47,17 @@
       </form>
     </div>
   </section>
+  <section id="edit" class="ModalWindow">
+    <div class="ModalWindow-box">
+      <a href="#">cerrar</a>
+      <h2>Editar Género</h2>
+      <form class="Form-edit">
+        <input type="text" name="genre_name" placeholder="Género" required>
+        <input type="hidden" name="genre_id">
+        <input type="submit"> 
+      </form>
+    </div>
+  </section>
   <template id="table-row">
     <tr>
       <td class="genre_id"></td>

@@ -55,6 +55,7 @@
               tr.querySelector('.genre_id').textContent = row.genre_id
               tr.querySelector('.genre_name').textContent = row.genre_name
               tr.querySelector('.u-edit').dataset.id = row.genre_id
+              tr.querySelector('.u-edit').dataset.name = row.genre_name
               tr.querySelector('.u-delete').dataset.id = row.genre_id
 
               let clone = d.importNode(tr, true)
@@ -90,6 +91,17 @@
         url: `./crud.php?action=${action}`,
         data: new FormData(e.target)
       })
+    }
+  })
+
+  d.addEventListener('click', e => {
+    if (e.target.matches('.u-edit')) {
+      let form = d.querySelector('.Form-edit')
+      //c(e.target.dataset)
+      form.querySelector('[name="genre_name"]').value = e.target.dataset.name
+      form.querySelector('[name="genre_id"]').value = e.target.dataset.id
+    } else if (e.target.matches('.u-delete')) {
+      alert('click eliminar')
     }
   })
 })(document, window, console.log, JSON, new XMLHttpRequest());

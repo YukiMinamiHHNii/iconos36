@@ -66,9 +66,24 @@ if ( $mysql->connect_error ) {
       break;
 
     case 'update':
+      $genre_id = $_POST['genre_id'];
+      $genre_name = $_POST['genre_name'];
+      $sql = "UPDATE genres SET genre_name = '$genre_name' WHERE genre_id = $genre_id";
+      $result = $mysql->query($sql);
+
+      if ( $result ) {
+        $err = false;
+        $data = 'Registro actualizado con éxito';
+      } else {
+        $err = true;
+        $data = 'Error al tratar de actualizar el registro';
+      }
+
       $res = array(
-        'err' => false,
-        'type' => 'Acción Update'
+        'err' => $err,
+        'type' => 'Acción Update',
+        'data' => $data,
+        'sql' => $sql
       );
       break;
 
