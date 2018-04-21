@@ -5,6 +5,31 @@
     table = d.querySelector('.CRUD-table'),
     tr = d.getElementById('table-row').content
 
+  function ajaxPOST(req) {
+    preload.classList.add('is-active')
+
+    xhr.open(req.method, req.url, true)
+
+    xhr.addEventListener('readystatechange', e => {
+      if (xhr.readyState === 4) {
+
+        w.location.hash = '#'
+        preload.classList.remove('is-active')
+        message.classList.add('is-active')
+
+        if (xhr.status >= 200 && xhr.status < 400) {
+          let res = j.parse(xhr.response)
+          message.innerHTML = res.data
+        } else {
+          message.innerHTML = `<b>El servidor NO responde. Error N° ${xhr.status}: <mark>${xhr.statusText}</mark></b>`
+        }
+        setTimeout(() => w.location.reload(), 1500)
+      }
+    })
+
+    xhr.send(req.data)
+  }
+
   d.addEventListener('DOMContentLoaded', e => {
     preload.classList.add('is-active')
 
@@ -52,8 +77,7 @@
     xhr.open('POST', './crud.php?action=create', true)
     xhr.addEventListener('readystatechange', e => {
       c(xhr.response)
-      //w.location.hash = '#'
-      //w.location.reload()
+
     })
     xhr.send(formData)
   })
