@@ -88,9 +88,23 @@ if ( $mysql->connect_error ) {
       break;
 
     case 'delete':
+      $genre_id = $_POST['genre_id'];
+      $sql = "DELETE FROM genres WHERE genre_id = $genre_id";
+      $result = $mysql->query($sql);
+
+      if ( $result ) {
+        $err = false;
+        $data = 'Registro eliminado con éxito';
+      } else {
+        $err = true;
+        $data = 'Error al tratar de eliminar el registro';
+      }
+
       $res = array(
-        'err' => false,
-        'type' => 'Acción Delete'
+        'err' => $err,
+        'type' => 'Acción Delete',
+        'data' => $data,
+        'sql' => $sql
       );
       break;
 

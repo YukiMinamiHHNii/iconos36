@@ -54,7 +54,19 @@
       <form class="Form-edit">
         <input type="text" name="genre_name" placeholder="Género" required>
         <input type="hidden" name="genre_id">
-        <input type="submit"> 
+        <input type="submit">
+      </form>
+    </div>
+  </section>
+  <section id="delete" class="ModalWindow">
+    <div class="ModalWindow-box">
+      <a href="#">cerrar</a>
+      <h2>Eliminar Género</h2>
+      <form class="Form-delete">
+        <p>¿Estás seguro de eliminar el registro <mark></mark>?</p>
+        <input type="hidden" name="genre_id">
+        <input type="submit" name="yes" value="SI">
+        <input type="reset" name="no" value="NO">
       </form>
     </div>
   </section>

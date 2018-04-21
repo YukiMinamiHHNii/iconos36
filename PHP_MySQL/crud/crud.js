@@ -101,7 +101,13 @@
       form.querySelector('[name="genre_name"]').value = e.target.dataset.name
       form.querySelector('[name="genre_id"]').value = e.target.dataset.id
     } else if (e.target.matches('.u-delete')) {
-      alert('click eliminar')
+      let form = d.querySelector('.Form-delete')
+      form.querySelector('[name="genre_id"]').value = e.target.dataset.id
+      form.querySelector('mark').textContent = e.target.dataset.id
+    } else if (e.target.matches('[type="reset"')) {
+      let form = d.querySelector('.Form-delete')
+      form.reset()
+      w.location.hash = '#'
     }
   })
 })(document, window, console.log, JSON, new XMLHttpRequest());
