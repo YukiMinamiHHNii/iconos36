@@ -70,15 +70,26 @@
     xhr.send()
   })
 
-  d.querySelector('.Form-add').addEventListener('submit', e => {
-    let formData = new FormData(e.target)
-    e.preventDefault()
+  d.addEventListener('submit', e => {
+    if (e.target.matches('form')) {
+      let action
+      e.preventDefault()
 
-    xhr.open('POST', './crud.php?action=create', true)
-    xhr.addEventListener('readystatechange', e => {
-      c(xhr.response)
+      if (e.target.matches('.Form-add')) {
+        action = 'create'
+      } else if (e.target.matches('.Form-edit')) {
+        action = 'update'
+      } else if (e.target.matches('.Form-delete')) {
+        action = 'delete'
+      } else {
+        action = 'not-action'
+      }
 
-    })
-    xhr.send(formData)
+      ajaxPOST({
+        method: 'POST',
+        url: `./crud.php?action=${action}`,
+        data: new FormData(e.target)
+      })
+    }
   })
 })(document, window, console.log, JSON, new XMLHttpRequest());
