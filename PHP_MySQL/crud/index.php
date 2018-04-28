@@ -32,11 +32,44 @@
       <tr>
         <th>genre_id</th>
         <th>genre_name</th>
-        <th>editar</th>
-        <th>borrar</th>
+        <th></th>
+        <th></th>
       </tr>
     </table>
   </main>
+  <section id="add" class="ModalWindow">
+    <div class="ModalWindow-box">
+      <a href="#">cerrar</a>
+      <h2>Agregar Género</h2>
+      <form class="Form-add">
+        <input type="text" name="genre_name" placeholder="Género" required>
+        <input type="submit">
+      </form>
+    </div>
+  </section>
+  <section id="edit" class="ModalWindow">
+    <div class="ModalWindow-box">
+      <a href="#">cerrar</a>
+      <h2>Editar Género</h2>
+      <form class="Form-edit">
+        <input type="text" name="genre_name" placeholder="Género" required>
+        <input type="hidden" name="genre_id">
+        <input type="submit">
+      </form>
+    </div>
+  </section>
+  <section id="delete" class="ModalWindow">
+    <div class="ModalWindow-box">
+      <a href="#">cerrar</a>
+      <h2>Eliminar Género</h2>
+      <form class="Form-delete">
+        <p>¿Estás seguro de eliminar el registro <mark></mark>?</p>
+        <input type="hidden" name="genre_id">
+        <input type="submit" name="yes" value="SI">
+        <input type="reset" name="no" value="NO">
+      </form>
+    </div>
+  </section>
   <template id="table-row">
     <tr>
       <td class="genre_id"></td>

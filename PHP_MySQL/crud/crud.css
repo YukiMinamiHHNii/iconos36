@@ -27,10 +27,62 @@ html {
   padding: 0;
 }
 
+/* ********** @keyframes ********** */
+@keyframes showModal {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 /* ********** CRUD ********** */
 .CRUD {
   margin: 0 auto;
   max-width: var(--max-width);
+}
+
+.CRUD-table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  background-color: var(--main-color);
+  overflow-x: auto;
+}
+
+.CRUD-table tr:nth-child(even) { background-color: var(--bg-color); }
+
+.CRUD-table tr:nth-child(odd):not(:first-child) { background-color: var(--bg-alternate-color); }
+
+.CRUD-table th {
+  padding: .5rem;
+  text-align: left;
+  font-size: 1.15rem;
+  color: var(--bg-color);
+}
+
+.CRUD-table td { padding: .5rem; }
+
+/* ********** ModalWindow ********** */
+.ModalWindow {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-modal-color);
+}
+
+.ModalWindow:target {
+  display: flex;
+  animation: showModal .5s ease-in-out;
+}
+
+.ModalWindow-box {
+  padding: 1rem;
+  background-color: var(--bg-color);
+  width: 50%;
 }
 
 /* ********** Utilities Classes ********** */
