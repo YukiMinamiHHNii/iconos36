@@ -45,3 +45,10 @@
 | 9. Entrega final del archivo con opercaiones CRUD de la BD x3 | 30 | 30 | 24 | 0 | 30 |
 | **Sitios Dinámicos con  MySQL y PHP**  | 10 | 10 | 10 | 8 | 9 |
 | 10. ¿? x1 | ? | ? | ? | ? | ? |
+
+
+## Módulo 3
+
+* Crud de la tabla catálogo
+* Desplegar la información de la BD en el Home ( Con Maquetación Final )
+* Agregar Módulo de Formulario de Contacto
