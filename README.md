@@ -48,7 +48,18 @@
 
 
 ## Módulo 3
+Entrega Final: 19 de mayo al medio dia
 
-* Crud de la tabla catálogo
-* Desplegar la información de la BD en el Home ( Con Maquetación Final )
-* Agregar Módulo de Formulario de Contacto
+Enviar:
+
+* Esquema SQL de la bd.
+* Carpeta del proyecto
+* Carpeta del ejercicio CRUD
+
+Aspectos a Evaluar:
+
+* 20% Ejercicio del CRUD.
+* 20% Layout del Proyecto final
+* 20% Mostrar en el Home la información de la tabla principal de la BD
+* 20% Sesión que valide usuario y password en BD
+* 20% Módulo de Formulario de Contacto que inserte el registro en la BD
