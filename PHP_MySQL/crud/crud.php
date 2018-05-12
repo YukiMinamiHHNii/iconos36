@@ -120,5 +120,9 @@ if ( $mysql->connect_error ) {
 //$result->free();
 $mysql->close();
 
+
+
+
 header( 'Content-type: application/json' );
 echo json_encode($res);
+

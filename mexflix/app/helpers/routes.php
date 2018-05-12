@@ -42,11 +42,19 @@ switch ($route) {
       'content' => './app/views/contact.php'
     );
     break;
-  
-  case 'salir':
 
+  case 'salir':
+    session_destroy();
+    $_GET = array(
+      'page' => 'Home',
+      'meta_title' => 'Home | Mexflix',
+      'meta_description' => 'Películas y series, cualquier parecido con Netflix es mera coincidencia.',
+      'meta_img' => './img/meta-image-home.jpg',
+      'meta_url' => '//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'],
+      'content' => './app/views/home.php'
+    );
     break;
-    
+
   default:
     $_GET = array(
       'page' => 'Error-404',
