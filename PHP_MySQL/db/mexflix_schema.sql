@@ -74,4 +74,15 @@ INSERT INTO movies ( imdb_id, title, plot, genres, premiere, poster, poster_bg, 
   ('tt4954522', 'Raw', 'Justine, una joven de 16 años, vive en una familia donde todos son veterinarios y vegetarianos. Es una estudiante brillante y prometedora, pero al ingresar en la facultad de veterinaria descubre un mundo decadente, despiadado y peligrosamente seductor. Durante la primera semana, obsesionada por encajar con sus compañeros de clase, se aleja de los principios que le han inculcado su familia, y come carne cruda por primera vez. Las consecuencias no tardan en llegar, y la joven empezará a desvelar su verdadera naturaleza.', 'Drama, Horror', '2016-10-07', 'https://image.tmdb.org/t/p/original/nsspHXM9tobnIMj8770vHLHPrKw.jpg', 'https://image.tmdb.org/t/p/original/qV1pUZAEdfX3sDb8jnkCjRQhXHG.jpg', '<iframe width="560" height="315" src="https://www.youtube.com/embed/gFlXVX2af_Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', 7.0, 'Movie'),
   ('tt6257970', 'The End of the F***ing World', 'Un psicópata adolescente y una chica rebelde con sed de aventura emprenden un accidentado viaje por carretera en esta serie de humor negro basada en una novela gráfica.', 'Comedy, Drama', '2017-10-24', 'https://image.tmdb.org/t/p/original/xzwwzmXbz6n2Y3fc0GbjqGiFQPm.jpg', 'https://image.tmdb.org/t/p/original/up1HuhhJnzrJ8El0ZJqpKNf0piL.jpg', '<iframe width="560" height="315" src="https://www.youtube.com/embed/SqILm2JuHx4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>', 8.4, 'Serie');
 
+CREATE TABLE users(
+  user_name VARCHAR(20) PRIMARY KEY,
+  user_email VARCHAR(80) UNIQUE,
+  user_full_name VARCHAR(100) NOT NULL,
+  user_pass CHAR(32) NOT NULL
+);
+
+INSERT INTO users (user_name, user_email, user_full_name, user_pass) VALUES ('@jonmircha', 'jonmircha@gmail.com', 'Jonathan MirCha', MD5('los perros rifan'));
+
+
+SELECT * FROM users WHERE user_name = '@jonmircha' AND user_pass = MD5('los perros rifan')
 COMMIT;
