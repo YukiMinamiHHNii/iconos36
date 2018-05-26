@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive and Progressive Web Design</title>
+  <style>
+    :root {
+      --color-primary: #F5AAB2;
+      --color-secondary: #301114;
+    }
+
+    html {
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    body {
+      width: 80%;
+      margin: auto;
+    }
+
+    a {
+      color: var(--color-secondary);
+      transition: all .3s ease-out;
+    }
+
+    a:hover {
+      color: var(--color-primary);
+    }
+
+    pre {
+      padding: 1rem;
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+      overflow-x: auto;
+    }
+
+    h1,
+    h2,
+    h3 {
+      padding: .5rem 1rem;
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+    }
+
+    h1,
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      margin: auto;
+      display: block;
+      max-width: 70%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Responsive and Progressive Web Design</h1>
+  <h2>Arquitectura CSS</h2>
+  <h3>Arquitectura</h3>
+  <p>Concepto según Wikipedia: </p>
+  <blockquote>
+    <ol>
+      <li>
+        Arte y técnica de diseñar, proyectar y construir edificios y espacios públicos. "La arquitectura es considerada una de las
+        bellas artes".
+      </li>
+      <li>
+        Técnica y estilo con los que se diseña, proyecta y construye un edificio o un monumento. "La arquitectura romana, la arquitectura
+        gótica, la arquitectura modernista, etc".
+      </li>
+    </ol>
+  </blockquote>
+  <p>Aplicando el concepto a CSS:</p>
+  <p>
+    Técnicas que nos ayudan a organizar y mantener nuestro código CSS de manera óptima y saludable; abstrayéndolo y dividiéndolo
+    en módulos y/o componentes que permitirán su reutilización y escalabilidad de manera estructurada y ordenada.
+  </p>
+  <h3>Componentes Modulares</h3>
+  <p>
+    <strong>DIVIDE Y VENCERÁS:</strong>
+  </p>
+  <blockquote>
+    <p>
+      “It's a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS and possibly JavaScript.”
+    </p>
+    <cite>
+      <a href="https://vimeo.com/72759139" target="_blank">Nicole Sullivan</a>
+    </cite>
+  </blockquote>
+  <ul>
+    <li>Son un fragmento de la interfaz que cumple una única función.</li>
+    <li>Son independientes, tanto de su contexto como del resto de componentes.</li>
+    <li>Son reutilizables.</li>
+    <li>Son autocontenidos, no filtran estilos a otros componentes.</li>
+  </ul>
+  <img src="./img/componentes-css.png" alt="Componentes Modulares">
+  <h3>Patrones de Diseño</h3>
+  <p>
+    Los patrones de diseño son la base para la búsqueda de soluciones a problemas comunes en el desarrollo de software y otros
+    ámbitos referentes al diseño de interacción o interfaces.
+  </p>
+  <p>
+    Un patrón resulta ser una solución a un problema. Para que una solución sea considerada patrón debe:
+  </p>
+  <ul>
+    <li>Comprobar su efectividad resolviendo problemas similares.</li>
+    <li>Ser reutilizable, lo que significa que es aplicable a diferentes problemas en distintas circunstancias.</li>
+  </ul>
+  <p>
+    <strong>¿Por qué usar Patrones en CSS?</strong>
+  </p>
+  <ul>
+    <li>Construimos sistemas, no páginas.</li>
+    <li>Necesidad de modularidad.</li>
+    <li>Mejora flujo de trabajo.</li>
+    <li>Ya han sido probados y validados.</li>
+    <li>Si trabajamos en equípo mantiene el órden.</li>
+    <li>Promueven la filosofía DRY
+      <strong>(Don't Repeat Yourself)</strong>.</li>
+  </ul>
+  <h3>Guías de Estilo</h3>
+  <p>
+    Genera un código más legible y fácil de mantener, disminuyen la cantidad de errores y refuerzan las buenas prácticas, además
+    permiten trabajar en un mismo proyecto a varios desarrolladores.
+  </p>
+  <ul>
+    <li>
+      <a href="https://github.com/airbnb/css" target="_blank">Airbnb CSS / Sass Styleguide</a>
+    </li>
+    <li>
+      <a href="https://github.com/necolas/idiomatic-css" target="_blank">Idiomatic CSS</a>
+    </li>
+    <li>
+      <a href="http://cssguidelin.es/" target="_blank">CSS Guidelines</a>
+    </li>
+    <li>
+      <a href="http://codeguide.co/" target="_blank">Code Guide</a>
+    </li>
+  </ul>
+  <h3>Sistemas de Nomenclaturas</h3>
+  <h4>
+    <a href="https://en.bem.info/" target="_blank">BEM - Bloque Elemento Modificador</a>
+  </h4>
+  <p>Estructura:</p>
+  <pre><code>.bloque { ... }
+.bloque__elemento { ... }
+.bloque--modificador { ... }</code></pre>
+  <p>Ejemplo:</p>
+  <pre><code>.menu { ... }
+.menu__item { ... }
+.menu__item--active{ ... }</code></pre>
+  <h4>
+    <a href="https://suitcss.github.io/" target="_blank">SUIT CSS - Utilidades y Componentes CSS</a>
+  </h4>
+  <p>Estructura:</p>
+  <pre><code>.MyComponent { ... }
+.MyComponent.is-animating { ... }
+.MyComponent--modifier { ... }
+.MyComponent-part { ... }
+.MyComponent-anotherPart { ... }</code></pre>
+  <p>Ejemplo:</p>
+  <pre><code>.Menu { ... }
+.Menu.is-visible { ... }
+.Menu--active { ... }
+.Menu-item { ... }
+.Menu-link { ... }</code></pre>
+  <h3>Tipos de Arquitecturas</h3>
+  <ul>
+    <li>
+      <a href="http://oocss.org/" target="_blank">OOCSS</a>
+    </li>
+    <li>
+      <a href="https://smacss.com/" target="_blank">SMACSS</a>
+    </li>
+    <li>
+      <a href="https://sass-guidelin.es/#architecture" target="_blank">7-1 Pattern​</a>
+    </li>
+    <li>
+      <a href="http://itcss.io/" target="_blank">ITCSS</a>
+    </li>
+    <li>
+      <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic Design</a>
+    </li>
+    <li>
+      <a href="http://www.bbc.co.uk/gel" target="_blank">GEL by BBC</a>
+    </li>
+  </ul>
+  <h3>Frameworks</h3>
+  <ul>
+    <li>
+      <a href="http://960.gs/" target="_blank">960 Grid System</a>
+    </li>
+    <li>
+      <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+    </li>
+    <li>
+      <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>
+    </li>
+    <li>
+      <a href="http://materializecss.com/" target="_blank">Materialize</a>
+    </li>
+    <li>
+      <a href="http://purecss.io/" target="_blank">Pure CSS</a>
+    </li>
+    <li>
+      <a href="http://semantic-ui.com/" target="_blank">Semantic UI</a>
+    </li>
+    <li>
+      <a href="http://flexboxgrid.com/" target="_blank">Flexbox Grid</a>
+    </li>
+    <li>
+      <a href="https://jonmircha.github.io/responsimple/" target="_blank">Responsimple</a>
+    </li>
+    <li>
+      <a href="http://ed-grid.com/" target="_blank">EDgrid</a>
+    </li>
+    <li>
+      <a href="https://www.muicss.com/" target="_blank">MUI</a>
+    </li>
+    <li>
+      <a href="http://ink.sapo.pt/" target="_blank">Ink</a>
+    </li>
+    <li>
+      <a href="http://getskeleton.com/" target="_blank">Skeleton</a>
+    </li>
+    <li>
+      <a href="https://jquerymobile.com/" target="_blank">jQueryMobile</a>
+    </li>
+  </ul>
+  <h3>Preprocesadores</h3>
+  <img src="./img/preprocesadores.png" alt="Preprocesadores" />
+  <p>
+    Son lenguajes independientes (generalmente, más amigables, potentes y prácticos) que son capaces de traducir el código al
+    lenguaje de destino (HTML, CSS o JavaScript), que son los únicos que los navegadores son capaces de entender de forma
+    nativa.
+  </p>
+  <p>
+    El objetivo de los preprocesadores es tener un código más sencillo de mantener y editar. Incluyen características tales como
+    variables, funciones, mixins, anidación y modularidad.
+  </p>
+  <ul>
+    <li>
+      <a href="http://lesscss.org/" target="_blank">Less</a>
+    </li>
+    <li>
+      <a href="http://stylus-lang.com/" target="_blank">Stylus</a>
+    </li>
+    <li>
+      <a href="http://www.myth.io/" target="_blank">Myth</a>
+    </li>
+    <li>
+      <a href="http://sass-lang.com/" target="_blank">Sass</a>
+      <ul>
+        <li>Sintaxis Sass</li>
+        <li>Sintaxis SCSS</li>
+      </ul>
+    </li>
+    <li>
+      <a href="http://postcss.org/" target="_blank">PostCSS</a>
+      <small>(herramienta para transformar CSS con JS)</small>
+      <ul>
+        <li>
+          <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a>
+        </li>
+        <li>
+          <a href="http://cssnext.io/" target="_blank">CSSNext</a>
+        </li>
+        <li>
+          <a href="https://github.com/css-modules/css-modules" target="_blank">CSS Modules</a>
+        </li>
+        <li>
+          <a href="http://stylelint.io/" target="_blank">Stylelint</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>Responsive Web Design</h2>
+  <ul>
+    <li>
+      <a href="https://alistapart.com/article/responsive-web-design" target="_blank">Responsive Web Design by Ethan Marcotte</a>
+    </li>
+    <li>
+      <a href="https://responsivedesign.is/" target="_blank">Responsive Web Design Is…</a>
+    </li>
+    <li>
+      <a href="https://github.com/jonmircha/curso-responsive-design/tree/master/Libros" target="_blank">Libros sobre Responsive Web Design</a>
+    </li>
+    <li>
+      <a href="https://ed.team/blog/todo-lo-que-debes-saber-sobre-el-responsive-web-design" target="_blank">Todo lo que debes saber sobre el Responsive Web Design (t)</a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/playlist?list=PLvq-jIkSeTUbFYbzpJFN1GLMBZnm9hX5G" target="_blank">Curso de Responsive Web Design en YouTube</a>
+    </li>
+    <li>
+      <a href="http://iconos.edu.mx/qrtesis/140171MV.html" target="_blank">TESIS: Diseño Web en la era móvil: Diez tips sobre Responsible Responsive Design</a>
+    </li>
+  </ul>
+  <h2 id="pwa">Progressive Web Apps (PWA's)</h2>
+  <ul>
+    <li>
+      <a href="https://ed.team/blog/aplicaciones-web-progresivas-la-evolucion-del-diseno-responsivo" target="_blank">Aplicaciones Web Progresivas: La evolución del Diseño Responsivo (t)</a>
+    </li>
+    <li>
+      <a href="https://jonmircha.github.io/edhtml5-pwa2017/#/" target="_blank">Más teoría sobre PWA's</a>
+    </li>
+    <li>
+      <a href="https://developers.google.com/web/progressive-web-apps/" target="_blank">PWA's Google Teoría</a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIAdnzEsWkg0KpMn2WJwMBmN" target="_blank">PWA's Google Curso</a>
+    </li>
+    <li>
+      <a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb" target="_blank">Web Server for Chrome</a>
+    </li>
+    <li>
+      Demo PWA's:
+      <ul>
+        <li>
+          <a href="https://jonmircha.github.io/miniserie-sitioweb-a-pwa/" target="_blank">Demo Funcionando</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/playlist?list=PLvq-jIkSeTUYIw8CP2AP7QJs4GeeZdvs6" target="_blank">Videos</a>
+        </li>
+        <li>
+          <a href="https://github.com/jonmircha/miniserie-sitioweb-a-pwa" target="_blank">Código</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <h2>CSS Layout Systems</h2>
+  <p>Sistemas de Maquetación CSS:</p>
+  <ol>
+    <li>
+      <b>Grid:</b> Bidimensional, pensado para planificar las estructuras y secciones externas de la UI.</li>
+    <li>
+      <b>Flexbox:</b> Unidimensional, pensado para el acomodo interno de los elementos, componentes y/o widgets de la UI.</li>
+  </ol>
+  <h3>Grid CSS</h3>
+  <ul>
+    <li>
+      <a href="http://chris.house/blog/a-complete-guide-css-grid-layout/" target="_blank">A Complete Guide to CSS Grid Layout</a>
+    </li>
+    <li>
+      <a href="http://learncssgrid.com/" target="_blank">Learn CSS Grid</a>
+    </li>
+    <li>
+      <a href="https://www.w3.org/TR/css3-grid-layout/" target="_blank">Grid W3C</a>
+    </li>
+    <li>
+      <a href="http://www.gridexamples.com/" target="_blank">Grid Examples</a>
+    </li>
+    <li>
+      <a href="https://ed.team/blog/introduccion-grid-css" target="_blank">Introducción a Grid (t)</a>
+    </li>
+    <li>
+      <a href="https://ed.team/blog/posicionamiento-grid-css" target="_blank">Posicionamiento Grid (t)</a>
+    </li>
+    <li>
+      <a href="https://ed.team/blog/responsive-design-con-grid-css-y-sin-media-queries" target="_blank">Responsive Design con Grid CSS y sin Media Queries (t)</a>
+    </li>
+    <li>
+      Aprende interactuando:
+      <ul>
+        <li>
+          <a href="https://codepen.io/collection/DgwjNL/" target="_blank">Colección de ejercicios</a>
+        </li>
+        <li>
+          <a href="http://codepen.io/anthonydugois/pen/RpYBmy" target="_blank">Grid Template Builder</a>
+        </li>
+        <li>
+          <a href="http://cssgridgarden.com/" target="_blank">Grid Garden</a>
+        </li>
+        <li>
+          <a href="http://griddy.io/" target="_blank">Griddy</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    <img src="./img/terminologia-grid.svg" alt="Terminología Grid">
+  </p>
+  <h3>Flexbox CSS</h3>
+  <ul>
+    <li>
+      <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a>
+    </li>
+    <li>
+      <a href="https://www.w3.org/TR/css-flexbox/" target="_blank">Flexbox W3C</a>
+    </li>
+    <li>
+      <a href="https://ed.team/blog/caracteristicas-flexbox" target="_blank">Características Flexbox (t)</a>
+    </li>
+    <li>
+      Aprende interactuando:
+      <ul>
+        <li>
+          <a href="http://codepen.io/jonmircha/pen/aWWbre" target="_blank">Propiedades Flexbox</a>
+        </li>
+        <li>
+          <a href="http://www.flexboxdefense.com/" target="_blank">Flexbox Defense</a>
+        </li>
+        <li>
+          <a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    <img src="./img/terminologia-flexbox.svg" alt="Terminología Flexbox">
+  </p>
+</body>
+
+</html>

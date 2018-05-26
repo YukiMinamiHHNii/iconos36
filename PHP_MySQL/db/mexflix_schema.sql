@@ -84,5 +84,14 @@ CREATE TABLE users(
 INSERT INTO users (user_name, user_email, user_full_name, user_pass) VALUES ('@jonmircha', 'jonmircha@gmail.com', 'Jonathan MirCha', MD5('los perros rifan'));
 
 
-SELECT * FROM users WHERE user_name = '@jonmircha' AND user_pass = MD5('los perros rifan')
+/* SELECT * FROM users WHERE user_name = '@jonmircha' AND user_pass = MD5('los perros rifan'); */
+
+CREATE TABLE contact_form (
+  contact_id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  contact_date DATE NOT NULL,
+  contact_name VARCHAR(100) NOT NULL,
+  contact_email VARCHAR(80) NOT NULL,
+  contact_subject VARCHAR(100) NOT NULL,
+  contact_comments TEXT
+);
 COMMIT;
