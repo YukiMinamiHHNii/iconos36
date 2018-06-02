@@ -1,0 +1,28 @@
+/* Título del sitio - https://midominio.com */
+  Descripción del sitio
+
+/* TEAM */
+	Design and Programming: Jonathan MirCha
+	Contact: hola [at] jonmircha.com
+	Twitter: @jonmircha
+	From: Mexico City, México
+
+/* THANKS */
+	@laflacaicc Irma Campos Cortés
+
+/* INSPIRATION */
+  * https://evanyou.me/
+  * https://ethanmarcotte.com/
+  * http://bradfrost.com/
+  * http://melaniedaveid.com/
+  * https://mxb.at/
+  * https://lynnandtonic.com/
+  * https://christinaallan.com/
+
+/* RESOURCES */
+  * http://www.heymeta.com/
+  * https://fonts.google.com/
+  * https://fontawesome.com/
+  * https://tinypng.com/
+  * https://coolors.co/
+  * https://website.grader.com/
